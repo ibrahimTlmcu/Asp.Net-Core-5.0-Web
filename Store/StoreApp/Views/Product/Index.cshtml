@@ -1,0 +1,27 @@
+
+@* Simdi urunler her geldiginde layouta bagli gelecek 
+layout icinde ne varsa onlarida getircek bi nevi iskeleti olcak *@
+
+@section Footer{
+    <div>
+        Only for Index footer
+    </div>
+}
+
+@model List<StoreApp.Models.Product>
+
+
+    @foreach (StoreApp.Models.Product prd in Model)
+    {
+        <div>
+            <h3>@prd.ProductName</h3>
+            <p>@prd.Price</p>
+
+            <P>
+                <a href="/Product/Get/@prd.ProductId">Get Details</a>
+            </P>
+        </div>
+    }
+
+
+</html>
